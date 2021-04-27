@@ -32,5 +32,19 @@ border-radius:30px;
     border-radius:30px;
 }
 .dd{
+position: absolute;
+color:white;
+cursor: pointer;
+}
 
+.task-content{
+    padding: 20px;
+}
+
+.todo-main .task-content > span{
+    display: block;
+    padding: 10px;
+    background-color:whitesmoke;
+    margin-bottom: 10px;
+    border-radius:30px;
 }
