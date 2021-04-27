@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
 }
@@ -11,38 +12,61 @@ header{
 h1{
     font-size:30px;
 }
-.todo-main{
-    width: 500px;
-    margin: 30px;
+.todo-container{
+    width: 600px;
+    margin: 30px auto 0;
     background-color: wheat;
     border-radius:30px;
 }
-.todo-main .add-task{
+.todo-container .add-task{
 background-color: violet;
-padding: 20px;
+padding: 15px;
+position: relative;
 border-radius:30px;
 }
 
-.todo-main .add-task input{
+.todo-container .add-task input{
+    display: inline-block;
     border: none;
-    padding: 10px;
-    width: 90%;
-    background-color: thistle;
+    padding: 10px 15px;
+    width: 100%;
+    background-color:rgba(255,255,255,.3);
     outline: none;
     border-radius:30px;
+    color: white;
+    font-size: 20px;
 }
-.add{
+
+.todo-container .add-task input:focus{
+    outline: none;
+}
+.todo-container .add-task .add{
 position: absolute;
-color:rgb(201, 29, 129);
+height: 44px;
+width: 44px;
+color:rgb(218, 197, 209);
+right: 12px;
 cursor: pointer;
-border-radius:10px;
+border-radius:50%;
+line-height: 44px;
+text-align: center;
+font-size: 38px;
+transition: transform.3s ;
+}
+.todo-container .add-task .add:hover{
+transform: rotate(90deg);
 }
 
-.tasks-content{
-    padding: 20px;
-}
 
-.todo-main .tasks-content > span{
+
+.todo-container.tasks-content{
+    padding: 15px;
+}
+.todo-container.tasks-content .no-tasks-message{
+    font-size: 15px;
+    color:#777;
+}
+.todo-container .tasks-content > span{
     display: block;
     padding: 10px;
     background-color:whitesmoke;
@@ -50,17 +74,57 @@ border-radius:10px;
     border-radius:30px;
 }
 
-.todo-main .tasks-content .task-box .delete{
+.todo-container .tasks-content > span:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.todo-container .tasks-content .task-box .delete{
     float: right;
     background-color: red;
-    padding: 4px 8px;
+    padding: 4px 10px;
     color: white;
     font-size: 12px;
     font-weight: bold;
-    border-radius:15px;
+    border-radius:4px;
     cursor: pointer;
 }
 
-.todo-main .tasks-content .task-box .finished{
+.todo-container .tasks-content .task-box .finished{
     text-decoration: line-through;
+}
+
+.task-stats{
+    overflow: hidden;
+    margin: 10px auto;
+    width: 600px;
+    font-size: 12px;
+}
+.task-stats .tasks-count{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.task-stats .tasks-completed{
+    width: 50%;
+    float: right;
+    padding: 10px;
+    text-align: right;
+}
+
+.task-stats .tasks-count span,
+.task-stats .tasks-completed span{
+    color: white;
+    padding: 1px 5px;
+    font-size: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.task-stats .tasks-count span{
+    background-color: red;
+}
+
+.task-stats .tasks-completed span{
+    background-color: blue;
 }

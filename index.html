@@ -13,13 +13,14 @@
         <h1> what you do today..?</h1>
     </header>
    
-    <div class="todo-main">
+    <div class="todo-container">
         <div class="add-task">
             <input type="text">
-            <button class="add">add</button>
+            <button class="add">+</button>
         </div>
         <div class="tasks-content">
-            <span class="task-box">
+            <span class="no-tasks-message">No tasks to show</span>
+            <!--<span class="task-box">
                 Task One
                 <span class="delete">Delete</span>
             </span>
@@ -28,14 +29,17 @@
                 Task Two
                 <span class="delete">Delete</span>
             </span>
+        </div>
+    </div>-->
+    <div class="task-stats">
+        <div class="tasks-count">
+            Tasks<span>0</span>
+        </div>
 
-            <span class="task-box">
-                Task Three
-                <span class="delete">Delete</span>
-            </span>
+        <div class="tasks-completed">
+            Completed<span>0</span>
         </div>
     </div>
-
     <script src="main.js"></script>
 </body>
 </html>
