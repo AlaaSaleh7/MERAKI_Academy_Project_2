@@ -31,10 +31,11 @@ border-radius:30px;
     outline: none;
     border-radius:30px;
 }
-.dd{
+.add{
 position: absolute;
-color:white;
+color:rgb(201, 29, 129);
 cursor: pointer;
+border-radius:10px;
 }
 
 .tasks-content{
@@ -58,4 +59,8 @@ cursor: pointer;
     font-weight: bold;
     border-radius:15px;
     cursor: pointer;
+}
+
+.todo-main .tasks-content .task-box .finished{
+    text-decoration: line-through;
 }
