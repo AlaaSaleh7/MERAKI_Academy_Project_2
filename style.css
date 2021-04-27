@@ -37,14 +37,25 @@ color:white;
 cursor: pointer;
 }
 
-.task-content{
+.tasks-content{
     padding: 20px;
 }
 
-.todo-main .task-content > span{
+.todo-main .tasks-content > span{
     display: block;
     padding: 10px;
     background-color:whitesmoke;
     margin-bottom: 10px;
     border-radius:30px;
+}
+
+.todo-main .tasks-content .task-box .delete{
+    float: right;
+    background-color: red;
+    padding: 4px 8px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius:15px;
+    cursor: pointer;
 }
