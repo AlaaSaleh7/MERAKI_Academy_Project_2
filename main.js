@@ -5,15 +5,19 @@ const tasksContainer=document.querySelector(".todo-container");
 const noTaskMsg = document.querySelector(".no-tasks-message");
 const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
+const dateElement=document.querySelector("#date");
 
 window.onload=function(){
     theInput.focus();
+    numberTasks();
 };
 
 addButton.onclick = function(){
 if(theInput.value===''){
+  //let message=document.createElement("span");
+  //let textMessage =document.createTextNode("Please Add Task!");
+  //message.appendChild(textMessage);
 
-    console.log('No value');
 }else{
     noTaskMsg.remove(); 
 
@@ -41,4 +45,22 @@ if(theInput.value===''){
 
     theInput.focus();
 }
+};
+
+
+document.addEventListener('click',function(i){
+if(i.target.className==="delete"){
+i.target.parentNode.remove();
+}
+
+if(i.target.className==="task-box"){
+    i.target.classList.toggle("finished");
+    }
+});
+
+
+numberTasks=()=>{
+    tasksCount.innerHTML=document.querySelectorAll('.tasks-content .task-box').length;
+
+    tasksCompleted.innerHTML=document.querySelectorAll('.tasks-content .finished').length;
 };
