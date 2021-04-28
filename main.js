@@ -12,11 +12,10 @@ window.onload=function(){
     numberTasks();
 };
 
+
 addButton.onclick = function(){
 if(theInput.value===''){
-  //let message=document.createElement("span");
-  //let textMessage =document.createTextNode("Please Add Task!");
-  //message.appendChild(textMessage);
+  
 
 }else{
     noTaskMsg.remove(); 
@@ -44,22 +43,25 @@ if(theInput.value===''){
     theInput.value ='';
 
     theInput.focus();
+
+    numberTasks();
 }
 };
 
 
 document.addEventListener('click',function(i){
-if(i.target.className==="delete"){
+if(i.target.className=="delete"){
 i.target.parentNode.remove();
 }
 
-if(i.target.className==="task-box"){
+
+if(i.target.classList.contains==("task-box")){
     i.target.classList.toggle("finished");
     }
 });
 
 
-numberTasks=()=>{
+function numberTasks(){
     tasksCount.innerHTML=document.querySelectorAll('.tasks-content .task-box').length;
 
     tasksCompleted.innerHTML=document.querySelectorAll('.tasks-content .finished').length;
