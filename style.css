@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: bisque;
 }
 header{
@@ -14,6 +14,7 @@ h1{
     font-size:30px;
 }
 .todo-container{
+    display: flexbox;
     width: 600px;
     margin: 30px auto 0;
     background-color: wheat;
@@ -42,6 +43,7 @@ border-radius:30px;
     outline: none;
 }
 .todo-container .add-task .add{
+border: none;
 position: absolute;
 height: 44px;
 width: 44px;
@@ -59,12 +61,12 @@ transform: rotate(90deg);
 }
 
 
-
 .todo-container .tasks-content{
     padding: 15px;
+
 }
 .todo-container .tasks-content .no-tasks-message{
-    font-size: 15px;
+    font-size: 20px;
     color:#777;
 }
 .todo-container .tasks-content > span{
@@ -79,15 +81,25 @@ transform: rotate(90deg);
     margin-bottom: 10px;
 }
 .delete{
-    display: block;
     float: right;
     background-color: red;
-    padding: 4px 10px;
+    padding: 4px 4px;
     color: white;
     font-size: 12px;
     font-weight: bold;
     border-radius:4px;
     cursor: pointer;  
+}
+
+.task-box {
+display: block;
+font-size: 25px;
+display: block;
+padding: 10px;
+background-color:;
+margin-bottom: 10px;
+border-radius:30px;
+background-color: rgba(224, 228, 230, 0.678);
 }
 
 
@@ -124,9 +136,11 @@ transform: rotate(90deg);
 }
 
 .task-stats .tasks-count span{
+    margin: 3px;
     background-color: red;
 }
 
 .task-stats .tasks-completed span{
     background-color: blue;
+    margin: 3px;
 }
