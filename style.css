@@ -8,6 +8,7 @@ body{
 }
 header{
     font-size:60px;
+    text-align: center;
 }
 h1{
     font-size:30px;
@@ -59,10 +60,10 @@ transform: rotate(90deg);
 
 
 
-.todo-container.tasks-content{
+.todo-container .tasks-content{
     padding: 15px;
 }
-.todo-container.tasks-content .no-tasks-message{
+.todo-container .tasks-content .no-tasks-message{
     font-size: 15px;
     color:#777;
 }
@@ -74,11 +75,11 @@ transform: rotate(90deg);
     border-radius:30px;
 }
 
-.todo-container .tasks-content > span:not(:last-child){
+.tasks-content > span:not(:last-child){
     margin-bottom: 10px;
 }
-
-.todo-container .tasks-content .task-box .delete{
+.delete{
+    display: block;
     float: right;
     background-color: red;
     padding: 4px 10px;
@@ -86,8 +87,9 @@ transform: rotate(90deg);
     font-size: 12px;
     font-weight: bold;
     border-radius:4px;
-    cursor: pointer;
+    cursor: pointer;  
 }
+
 
 .todo-container .tasks-content .task-box .finished{
     text-decoration: line-through;
