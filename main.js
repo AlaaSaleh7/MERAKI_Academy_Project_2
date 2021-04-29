@@ -22,37 +22,40 @@ noTaskMsg.innerHTML = 'Please Add Your Task !';
 }else{
     noTaskMsg.remove(); 
     arr.push(theInput.value);
+    showList(arr);
 }
 };
 
-myFunction = (x)=>{
+showList = (x)=>{
     noTaskMsg.remove(); 
+    for(let i = 0; i < x.length;i++){
+        let mainSpan = document.createElement("span");
 
-    let mainSpan = document.createElement("span");
-
-    let deleteElement= document.createElement("span");
-
-    let text=document.createTextNode(theInput.value);
-
-    let textDelete=document.createTextNode("delete");
-
-    mainSpan.appendChild(text);
+        let deleteElement= document.createElement("span");
     
-    mainSpan.className="task-box";
-
-    deleteElement.appendChild(textDelete);
-
-    deleteElement.className="delete";
-
-    mainSpan.appendChild(deleteElement);
-
-    tasksContainer.appendChild(mainSpan);
-
-    theInput.value ='';
-
-    theInput.focus();
-
-    numberTasks();
+        let text=document.createTextNode(x[i]);
+    
+        let textDelete=document.createTextNode("delete");
+    
+        mainSpan.appendChild(text);
+        
+        mainSpan.className="task-box";
+    
+        deleteElement.appendChild(textDelete);
+    
+        deleteElement.className="delete";
+    
+        mainSpan.appendChild(deleteElement);
+    
+        tasksContainer.appendChild(mainSpan);
+    
+        theInput.value ='';
+    
+        theInput.focus();
+    
+        numberTasks();
+    }
+    
 };
 
 
