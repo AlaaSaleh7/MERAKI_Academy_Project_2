@@ -15,7 +15,8 @@ window.onload=function(){
 
 addButton.onclick = function(){
 if(theInput.value===''){
-  
+  noTaskMsg.innerHTML = 'Please Add Your Task !';
+
 
 }else{
     noTaskMsg.remove(); 

@@ -7,13 +7,21 @@ body{
     background-color: #eeeeee;
 }
 header{
-    font-size:80px;
+    font-size:75px;
     text-align: center;
     color: #00adb5;
     font-weight: bold;
 }
 header span{
 color:#e4bad4 ;
+}
+.day{
+    display: flexbox;
+    width: 600px;
+    margin: 30px auto 0;
+    background-color: #e4bad4;
+    border-radius:30px;
+    position: ;
 }
 h1{
     font-size:30px;
@@ -40,7 +48,7 @@ border-radius:30px;
     background-color:rgba(255,255,255,.3);
     outline: none;
     border-radius:30px;
-    color: white;
+    color:#393e46;
     font-size: 20px;
 }
 
@@ -68,6 +76,7 @@ transform: rotate(90deg);
 
 .todo-container .tasks-content{
     padding: 15px;
+    color: #393e46;
 
 }
 .todo-container .tasks-content .no-tasks-message{
@@ -88,7 +97,7 @@ transform: rotate(90deg);
 .delete{
     float: right;
     padding: 4px 4px;
-    color: #810000;
+    color: #ce1f6a;
     font-size: 16px;
     font-weight: bold;
     border-radius:4px;
@@ -98,7 +107,7 @@ transform: rotate(90deg);
 .task-box {
 display: block;
 font-size: 25px;
-display: block;
+color: #393e46;
 padding: 10px;
 background-color:white;
 margin-bottom: 10px;
@@ -121,7 +130,7 @@ background-color: rgba(224, 228, 230, 0.678);
     width: 50%;
     float: left;
     padding: 10px;
-    color: #ce1f6a;
+    color: #72147e;
     font-size: 18px;
     font-weight: bold;
 }
@@ -131,7 +140,7 @@ background-color: rgba(224, 228, 230, 0.678);
     float: right;
     padding: 10px;
     text-align: right;
-    color: #ce1f6a;
+    color: #72147e;
     font-size: 18px;
     font-weight: bold;
 }
