@@ -100,7 +100,7 @@ transform: rotate(90deg);
 .tasks-content > span:not(:last-child){
     margin-bottom: 10px;
 }
-.delete{
+#delete{
     float: right;
     padding: 4px 4px;
     color: #ce1f6a;

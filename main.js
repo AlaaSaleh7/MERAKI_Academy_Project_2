@@ -5,6 +5,7 @@ const tasksContainer=document.querySelector(".todo-container");
 const noTaskMsg = document.querySelector(".no-tasks-message");
 const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
+const taskContent = document.querySelector(".tasks-content");
 
 
 window.onload=function(){
@@ -28,6 +29,7 @@ noTaskMsg.innerHTML = 'Please Add Your Task !';
 
 showList = (x)=>{
     noTaskMsg.remove(); 
+    taskContent.innerHTML="";
     for(let i = 0; i < x.length;i++){
         let mainSpan = document.createElement("span");
 
@@ -36,18 +38,20 @@ showList = (x)=>{
         let text=document.createTextNode(x[i]);
     
         let textDelete=document.createTextNode("delete");
-    
+        
+        textDelete.id = i;
+
         mainSpan.appendChild(text);
         
         mainSpan.className="task-box";
     
         deleteElement.appendChild(textDelete);
     
-        deleteElement.className="delete";
+        deleteElement.id="delete";
     
         mainSpan.appendChild(deleteElement);
     
-        tasksContainer.appendChild(mainSpan);
+        taskContent.appendChild(mainSpan);
     
         theInput.value ='';
     
@@ -60,9 +64,11 @@ showList = (x)=>{
 
 
 document.addEventListener('click',function(i){
+document.getElementsByClassName("delete").id = "dul";
 if(i.target.className=="delete"){
-i.target.parentNode.remove();
-}
+arr.splice();
+console.log(i.target);
+};
 
 
 if(i.target.classList.contains==("task-box")){
