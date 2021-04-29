@@ -5,20 +5,27 @@ const tasksContainer=document.querySelector(".todo-container");
 const noTaskMsg = document.querySelector(".no-tasks-message");
 const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
-const dateElement=document.querySelector("#date");
+
 
 window.onload=function(){
     theInput.focus();
     numberTasks();
 };
 
+let arr = [];
 
 addButton.onclick = function(){
 if(theInput.value===''){
-  noTaskMsg.innerHTML = 'Please Add Your Task !';
+noTaskMsg.innerHTML = 'Please Add Your Task !';
 
 
 }else{
+    noTaskMsg.remove(); 
+    arr.push(theInput.value);
+}
+};
+
+myFunction = (x)=>{
     noTaskMsg.remove(); 
 
     let mainSpan = document.createElement("span");
@@ -46,7 +53,6 @@ if(theInput.value===''){
     theInput.focus();
 
     numberTasks();
-}
 };
 
 
@@ -60,7 +66,6 @@ if(i.target.classList.contains==("task-box")){
     i.target.classList.toggle("finished");
     }
 });
-
 
 function numberTasks(){
     tasksCount.innerHTML=document.querySelectorAll('.tasks-content .task-box').length;

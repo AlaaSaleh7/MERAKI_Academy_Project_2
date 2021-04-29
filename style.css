@@ -15,13 +15,18 @@ header{
 header span{
 color:#e4bad4 ;
 }
+#no-tasks{
+    color:red;
+    background-color:transparent;
+    margin: 0;
+    font-size: 15px;
+}
 .day{
     display: flexbox;
-    width: 600px;
+    width: 40%;
     margin: 30px auto 0;
     background-color: #e4bad4;
     border-radius:30px;
-    position: ;
 }
 h1{
     font-size:30px;
@@ -38,6 +43,7 @@ background-color: #aad8d3;
 padding: 15px;
 position: relative;
 border-radius:30px;
+margin: 10px;
 }
 
 .todo-container .add-task input{
