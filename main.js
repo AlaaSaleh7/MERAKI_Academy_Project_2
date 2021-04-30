@@ -48,7 +48,13 @@ showList = (x)=>{
     
         deleteElement.appendChild(textDelete);
     
-        deleteElement.id="delete";
+        deleteElement.id=`delete${i}`;
+
+        deleteElement.classList.add("delete") 
+
+        deleteElement.addEventListener('click',deleteTask)
+
+       
     
         mainSpan.appendChild(deleteElement);
     
@@ -63,13 +69,18 @@ showList = (x)=>{
     
 };
 
-const taskBox= document.querySelector('task-box');
-taskBox.addEventListener('click', function(i) {
-  if (i.target.class== 'task-box') {
-    i.target.id=='delete';
-  }
-  arr.splice(i,1);
-},false);
+function deleteTask(e) {
+    
+    e.target.parentElement.style.display = 'none'    
+};
+
+
+
+
+
+// $(".delete").on('click', deleteTask)
+
+
 //const deleteListItem= ('click',function(){
 
   //  document.getElementById("delete").innerHTML=arr;
