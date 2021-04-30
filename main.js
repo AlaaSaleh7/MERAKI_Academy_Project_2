@@ -50,12 +50,10 @@ showList = (x)=>{
     
         deleteElement.id=`delete${i}`;
 
-        deleteElement.classList.add("delete") 
+        deleteElement.classList.add("delete"); 
 
-        deleteElement.addEventListener('click',deleteTask)
+        deleteElement.addEventListener('click',deleteTask);
 
-       
-    
         mainSpan.appendChild(deleteElement);
     
         taskContent.appendChild(mainSpan);
@@ -70,40 +68,20 @@ showList = (x)=>{
 };
 
 function deleteTask(e) {
-    
-    e.target.parentElement.style.display = 'none'    
+    let d = e.target.id;
+
+    let a = d.replace('delete','');
+
+    e.target.parentElement.style.display = 'none';   
+
+    arr.splice(a,1);
+
+    numberTasks();
+
 };
 
-
-
-
-
-// $(".delete").on('click', deleteTask)
-
-
-//const deleteListItem= ('click',function(){
-
-  //  document.getElementById("delete").innerHTML=arr;
-    //    arr.splice(i , 1);
-      //return  document.getElementById("delete").innerHTML=arr;
-    
-//},false);
-        
-    // showList();
-//document.addEventListener('click',function(i){
-//document.getElementsByClassName("delete").id = "dul";
-//if(i.target.id=="delete"){
-//arr.splice(1);
-//showList();
-//};
-
-//if(i.target.classList.contains==("task-box")){
- //i.target.classList.toggle('finished');
-//};
-
-
 function numberTasks(){
-    tasksCount.innerHTML=document.querySelectorAll('.tasks-content .task-box').length;
+    tasksCount.innerHTML= arr.length;
 
-    tasksCompleted.innerHTML=document.querySelectorAll('.tasks-content .finished').length;
+ //tasksCompleted.innerHTML=.length;
 };
