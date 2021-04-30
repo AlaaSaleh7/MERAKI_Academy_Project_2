@@ -62,19 +62,22 @@ showList = (x)=>{
     
 };
 
+document.getElementById("delete").click = function(i){
+    arr.splice(i , 1);
+        
+     showList();
+//document.addEventListener('click',function(i){
+//document.getElementsByClassName("delete").id = "dul";
+//if(i.target.id=="delete"){
+//arr.splice(1);
+//showList();
+//};
 
-document.addEventListener('click',function(i){
-document.getElementsByClassName("delete").id = "dul";
-if(i.target.className=="delete"){
-arr.splice();
-console.log(i.target);
+
+//if(i.target.classList.contains==("task-box")){
+  //  i.target.classList.toggle("finished");
+    //}
 };
-
-
-if(i.target.classList.contains==("task-box")){
-    i.target.classList.toggle("finished");
-    }
-});
 
 function numberTasks(){
     tasksCount.innerHTML=document.querySelectorAll('.tasks-content .task-box').length;
