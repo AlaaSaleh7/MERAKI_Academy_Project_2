@@ -16,10 +16,12 @@ header span{
 color:#e4bad4 ;
 }
 #no-tasks{
-    color:red;
+    color: #ce1f6a;
     background-color:transparent;
-    margin: 0;
-    font-size: 15px;
+    margin: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .day{
     display: flexbox;
@@ -33,7 +35,7 @@ h1{
 }
 .todo-container{
     display: flexbox;
-    width: 600px;
+    width: 700px;
     margin: 30px auto 0;
     background-color: #e4bad4;
     border-radius:30px;
@@ -43,7 +45,7 @@ background-color: #aad8d3;
 padding: 15px;
 position: relative;
 border-radius:30px;
-margin: 10px;
+margin: 15px 20px;
 }
 
 .todo-container .add-task input{
@@ -85,10 +87,7 @@ transform: rotate(90deg);
     color: #393e46;
 
 }
-.todo-container .tasks-content .no-tasks-message{
-    font-size: 20px;
-    color:#777;
-}
+
 .todo-container .tasks-content > span{
     display: block;
     padding: 10px;

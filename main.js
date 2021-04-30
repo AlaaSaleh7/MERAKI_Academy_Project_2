@@ -20,6 +20,7 @@ if(theInput.value===''){
 noTaskMsg.innerHTML = 'Please Add Your Task !';
 
 
+
 }else{
     noTaskMsg.remove(); 
     arr.push(theInput.value);
@@ -61,11 +62,15 @@ showList = (x)=>{
     }
     
 };
+const deleteListItem= ('click',function(){
 
-document.getElementById("delete").click = function(i){
-    arr.splice(i , 1);
+    document.getElementById("delete").innerHTML=arr;
+        arr.splice(i , 1);
+      return  document.getElementById("delete").innerHTML=arr;
+    
+});
         
-     showList();
+    // showList();
 //document.addEventListener('click',function(i){
 //document.getElementsByClassName("delete").id = "dul";
 //if(i.target.id=="delete"){
@@ -73,11 +78,10 @@ document.getElementById("delete").click = function(i){
 //showList();
 //};
 
-
 //if(i.target.classList.contains==("task-box")){
-  //  i.target.classList.toggle("finished");
-    //}
-};
+ //i.target.classList.toggle('finished');
+//};
+
 
 function numberTasks(){
     tasksCount.innerHTML=document.querySelectorAll('.tasks-content .task-box').length;
