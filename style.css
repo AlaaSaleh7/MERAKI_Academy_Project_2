@@ -39,6 +39,7 @@ h1{
     margin: 30px auto 0;
     background-color: #e4bad4;
     border-radius:30px;
+    height:200px;
 }
 .todo-container .add-task{
 background-color: #aad8d3;

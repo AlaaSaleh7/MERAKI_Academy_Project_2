@@ -53,7 +53,7 @@ showList = (x)=>{
         mainSpan.appendChild(deleteElement);
     
         taskContent.appendChild(mainSpan);
-    
+
         theInput.value ='';
     
         theInput.focus();
@@ -62,13 +62,21 @@ showList = (x)=>{
     }
     
 };
-const deleteListItem= ('click',function(){
 
-    document.getElementById("delete").innerHTML=arr;
-        arr.splice(i , 1);
-      return  document.getElementById("delete").innerHTML=arr;
+const taskBox= document.querySelector('task-box');
+taskBox.addEventListener('click', function(i) {
+  if (i.target.class== 'task-box') {
+    i.target.id=='delete';
+  }
+  arr.splice(i,1);
+},false);
+//const deleteListItem= ('click',function(){
+
+  //  document.getElementById("delete").innerHTML=arr;
+    //    arr.splice(i , 1);
+      //return  document.getElementById("delete").innerHTML=arr;
     
-});
+//},false);
         
     // showList();
 //document.addEventListener('click',function(i){
