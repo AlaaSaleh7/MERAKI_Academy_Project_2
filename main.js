@@ -129,8 +129,6 @@ function numberTasks(){
 
 
 
-
-
 // Trying with jQuary//
 
 
