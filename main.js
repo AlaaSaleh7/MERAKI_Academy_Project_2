@@ -187,19 +187,21 @@ window.onload=function(){
     numberCompleted();
 
  };
+ let count = 0
+ function completedTask() {
+    //let d = e.target.id;
 
- function completedTask(e) {
-    let d = e.target.id;
+     //let a = d.replace('completed','');
+    
+    e.target.parentElement.style.display = 'none'; 
 
-    let a = d.replace('completed','');
+    .text('count');
 
-    e.target.parentElement.style.display = 'none';   
+    count ++;
 
-    arr.splice(a,1);
+     //numberCompleted();
 
-    numberCompleted();
-
-};
+ };
 
  function numberTasks(){
     tasksCount.innerHTML= arr.length;
