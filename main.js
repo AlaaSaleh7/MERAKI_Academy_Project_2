@@ -207,6 +207,6 @@ window.onload=function(){
   
 };
 
-function numberCompleted(){
-    tasksCompleted.innerHTML=arr.length;
-};
+//function numberCompleted(){
+   // tasksCompleted.innerHTML=arr.length;
+//};
