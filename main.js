@@ -1,4 +1,3 @@
-
 const body=document.querySelector("body");
 const theInput = document.querySelector(".add-task input");
 const addButton= document.querySelector(".add-task .add");
@@ -83,8 +82,8 @@ window.onload=function(){
      }
     
  };
- let count = 0
 
+ let count = 0
  function deleteTask(e) {
     let d = e.target.id;
 
@@ -103,6 +102,7 @@ window.onload=function(){
     completedTask();
 
  };
+
  function completedTask(e) {
     let d = e.target.id;
 
@@ -118,13 +118,11 @@ window.onload=function(){
 
     numberTasks();
 
-
  };
 
 function numberTasks(){
         tasksCount.innerHTML= arr.length;
 
-  
 };
 
 
