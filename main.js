@@ -1,15 +1,15 @@
 
- const body=document.querySelector("body");
- const theInput = document.querySelector(".add-task input");
- const addButton= document.querySelector(".add-task .add");
+const body=document.querySelector("body");
+const theInput = document.querySelector(".add-task input");
+const addButton= document.querySelector(".add-task .add");
 const tasksContainer=document.querySelector(".todo-container");
- const noTaskMsg = document.querySelector(".no-tasks-message");
+const noTaskMsg = document.querySelector(".no-tasks-message");
 const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
- const taskContent = document.querySelector(".tasks-content");
+const taskContent = document.querySelector(".tasks-content");
 
- myStorage = window.localStorage;
- localStorage.setItem('theInput', 'theInput.value');
+myStorage = window.localStorage;
+localStorage.setItem('theInput', 'theInput.value');
 
 window.onload=function(){
      theInput.focus();
@@ -32,24 +32,24 @@ window.onload=function(){
  };
 
  showList = (x)=>{
-     noTaskMsg.remove(); 
+    noTaskMsg.remove(); 
     taskContent.innerHTML="";
     for(let i = 0; i < x.length;i++){
         let mainSpan = document.createElement("span");
 
-         let deleteElement= document.createElement("span");
+        let deleteElement= document.createElement("span");
 
-         let completedElement = document.createElement("span");
+        let completedElement = document.createElement("span");
     
         let text=document.createTextNode(x[i]);
     
-         let textDelete=document.createTextNode("delete");
+        let textDelete=document.createTextNode("delete");
         
-         let textComp=document.createTextNode("completed");
+        let textComp=document.createTextNode("completed");
 
         textDelete.id = i;
 
-         mainSpan.appendChild(text);
+        mainSpan.appendChild(text);
         
         mainSpan.className="task-box";
     
@@ -61,38 +61,38 @@ window.onload=function(){
 
         completedElement.id=`completed${i}`;
 
-         deleteElement.classList.add("delete"); 
+        deleteElement.classList.add("delete"); 
 
         completedElement.classList.add("completed");
 
-         deleteElement.addEventListener('click',deleteTask);
+        deleteElement.addEventListener('click',deleteTask);
 
-         completedElement.addEventListener('click',completedTask);
+        completedElement.addEventListener('click',completedTask);
 
-         mainSpan.appendChild(deleteElement);
+        mainSpan.appendChild(deleteElement);
 
         mainSpan.appendChild(completedElement);
 
-         taskContent.appendChild(mainSpan);
+        taskContent.appendChild(mainSpan);
 
-         theInput.value ='';
+        theInput.value ='';
     
         theInput.focus();
     
-         numberTasks();
+        numberTasks();
      }
     
  };
  let count = 0
 
  function deleteTask(e) {
-     let d = e.target.id;
+    let d = e.target.id;
 
-     let a = d.replace('delete','');
+    let a = d.replace('delete','');
 
-     e.target.parentElement.style.display = 'none';   
+    e.target.parentElement.style.display = 'none';   
 
-     arr.splice(a,1);
+    arr.splice(a,1);
 
     numberTasks();
 
@@ -106,7 +106,7 @@ window.onload=function(){
  function completedTask(e) {
     let d = e.target.id;
 
-     let a = d.replace('completed','');
+    let a = d.replace('completed','');
     
     e.target.parentElement.style.display = 'none'; 
 
@@ -121,8 +121,8 @@ window.onload=function(){
 
  };
 
- function numberTasks(){
-    tasksCount.innerHTML= arr.length;
+function numberTasks(){
+        tasksCount.innerHTML= arr.length;
 
   
 };
