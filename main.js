@@ -156,7 +156,7 @@ window.onload=function(){
 
          deleteElement.addEventListener('click',deleteTask);
 
-          deleteElement.addEventListener('click',completedTask);
+         completedElement.addEventListener('click',completedTask);
 
          mainSpan.appendChild(deleteElement);
 
@@ -172,6 +172,7 @@ window.onload=function(){
      }
     
  };
+ let count = 0
 
  function deleteTask(e) {
      let d = e.target.id;
@@ -184,22 +185,27 @@ window.onload=function(){
 
     numberTasks();
 
-    numberCompleted();
+    if(count > 0) count--;
+
+    document.getElementById('count').textContent = count;
+
+    // numberCompleted();
 
  };
- let count = 0
- function completedTask() {
-    //let d = e.target.id;
+ function completedTask(e) {
+    let d = e.target.id;
 
-     //let a = d.replace('completed','');
+     let a = d.replace('completed','');
     
     e.target.parentElement.style.display = 'none'; 
 
-    .text('count');
+    count++;
 
-    count ++;
+    document.getElementById('count').textContent = count;
 
-     //numberCompleted();
+   
+
+    //  numberCompleted();
 
  };
 
