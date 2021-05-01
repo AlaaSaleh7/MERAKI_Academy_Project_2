@@ -189,7 +189,7 @@ window.onload=function(){
 
     document.getElementById('count').textContent = count;
 
-    // numberCompleted();
+    completedTask();
 
  };
  function completedTask(e) {
@@ -203,9 +203,10 @@ window.onload=function(){
 
     document.getElementById('count').textContent = count;
 
-   
+    arr.splice(a,1);
 
-    //  numberCompleted();
+    numberTasks();
+
 
  };
 
@@ -214,7 +215,3 @@ window.onload=function(){
 
   
 };
-
-//function numberCompleted(){
-   // tasksCompleted.innerHTML=arr.length;
-//};
