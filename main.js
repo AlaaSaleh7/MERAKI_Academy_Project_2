@@ -125,11 +125,15 @@ window.onload=function(){
         let mainSpan = document.createElement("span");
 
          let deleteElement= document.createElement("span");
+
+         let completedElement = document.createElement("span");
     
         let text=document.createTextNode(x[i]);
     
          let textDelete=document.createTextNode("delete");
         
+         let textComp=document.createTextNode("completed");
+
         textDelete.id = i;
 
          mainSpan.appendChild(text);
@@ -137,15 +141,25 @@ window.onload=function(){
         mainSpan.className="task-box";
     
         deleteElement.appendChild(textDelete);
-    
+
+        completedElement.appendChild(textComp);
+
         deleteElement.id=`delete${i}`;
+
+        completedElement.id=`completed${i}`;
 
          deleteElement.classList.add("delete"); 
 
+        completedElement.classList.add("completed");
+
          deleteElement.addEventListener('click',deleteTask);
 
+          deleteElement.addEventListener('click',completedTask);
+
          mainSpan.appendChild(deleteElement);
-    
+
+        mainSpan.appendChild(completedElement);
+
          taskContent.appendChild(mainSpan);
 
          theInput.value ='';
@@ -169,6 +183,19 @@ window.onload=function(){
     numberTasks();
 
  };
+
+ function completedTask(e) {
+    let d = e.target.id;
+
+    let a = d.replace('completed','');
+
+    e.target.parentElement.style.display = 'none';   
+
+    arr.splice(a,1);
+
+   numberTasks();
+
+};
 
  function numberTasks(){
     tasksCount.innerHTML= arr.length;
