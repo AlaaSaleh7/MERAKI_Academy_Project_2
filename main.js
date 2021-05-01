@@ -97,6 +97,8 @@ const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
  const taskContent = document.querySelector(".tasks-content");
 
+ myStorage = window.localStorage;
+ localStorage.setItem('theInput', 'theInput.value');
 
 window.onload=function(){
      theInput.focus();
@@ -182,6 +184,8 @@ window.onload=function(){
 
     numberTasks();
 
+    numberCompleted();
+
  };
 
  function completedTask(e) {
@@ -193,12 +197,16 @@ window.onload=function(){
 
     arr.splice(a,1);
 
-   numberTasks();
+    numberCompleted();
 
 };
 
  function numberTasks(){
     tasksCount.innerHTML= arr.length;
 
-  //tasksCompleted.innerHTML=.length;
+  
+};
+
+function numberCompleted(){
+    tasksCompleted.innerHTML=arr.length;
 };
