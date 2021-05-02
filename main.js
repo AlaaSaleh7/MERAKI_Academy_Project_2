@@ -6,6 +6,8 @@ const noTaskMsg = document.querySelector(".no-tasks-message");
 const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
 const taskContent = document.querySelector(".tasks-content");
+const completedButton = document.querySelector("#count");
+const allTasksButton = document.querySelector("#all-tasks");
 
 myStorage = window.localStorage;
 localStorage.setItem('theInput', 'theInput.value');
@@ -51,7 +53,7 @@ window.onload=function(){
         mainSpan.appendChild(text);
         
         mainSpan.className="task-box";
-    
+
         deleteElement.appendChild(textDelete);
 
         completedElement.appendChild(textComp);
@@ -117,14 +119,27 @@ window.onload=function(){
     arr.splice(a,1);
 
     numberTasks();
+   
 
  };
 
 function numberTasks(){
         tasksCount.innerHTML= arr.length;
-
 };
 
+
+let myArray = [];
+completedButton.onclick = function(){
+   myArray.push();
+   let arrayCompleted = document.createElement("div");
+   arrayCompleted.className="completed";
+   arrayCompleted.appendChild(taskContent);
+   showList();
+}
+
+allTasksButton.onclick = function(){
+
+}
 
 
 // Trying with jQuary//
