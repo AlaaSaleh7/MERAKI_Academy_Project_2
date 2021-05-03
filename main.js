@@ -93,6 +93,7 @@ window.onload=()=>{
 
  let count = 0
  function deleteTask(e) {
+   // console.log(e.target);
     let d = e.target.id;
 
     let a = d.replace('delete','');
@@ -110,12 +111,17 @@ window.onload=()=>{
     completedTask();
 
  };
+ let myArray = [];
 
  function completedTask(e) {
-    let d = e.target.id;
-
-    let a = d.replace('completed','');
     
+    let d = e.target.id;
+    //console.log(e.target);
+    let a = d.replace('completed','');
+   // console.log("arr",arr);
+    //console.log("sp",arr[a])
+    //const itemToPush = arr[a]
+    myArray.push(arr[a]);
     e.target.parentElement.style.display = 'none'; 
 
     count++;
@@ -125,6 +131,7 @@ window.onload=()=>{
     arr.splice(a,1);
 
 
+    console.log(myArray);
  };
 
  // give the numbers of the tasks by length of array.
@@ -133,13 +140,11 @@ window.onload=()=>{
 };
 
 
-let myArray = [];
 
 completedTask2 = ()=>{
-   let text=document.createTextNode(x[i]);
-   myArray.push();
+   // myArray array of completed
 
-   let arrayCompleted = document.createElement("div");
+let arrayCompleted= document.createElement("div");
 
    arrayCompleted.className="completed";
 
@@ -147,7 +152,6 @@ completedTask2 = ()=>{
 
    completedElement.addEventListener('click',completedTask2);
 
-   showList(myArray);
 }
 
 
