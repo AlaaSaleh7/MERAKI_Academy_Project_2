@@ -110,7 +110,7 @@ window.onload=()=>{
 
     document.getElementById('count').textContent = count;
 
-    completedTask();
+    //completedTask();
 
  };
  let myArray = [];
@@ -138,10 +138,10 @@ window.onload=()=>{
 
  // give the numbers of the tasks by length of array.
  const numberTasks=()=>{
-        tasksCount.innerHTML= arr.length;
+   tasksCount.innerHTML= arr.length;
 };
 
-
+// Ayman help me to think a bout it.
 taskCom.onclick=()=>{
    showList(myArray);
 }

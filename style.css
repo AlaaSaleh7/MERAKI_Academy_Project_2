@@ -17,9 +17,10 @@ header span{
 color:#e4bad4 ;
 }
 #no-tasks{
+    position:absolute;
     color: #ce1f6a;
     background-color:transparent;
-    margin: 35px;
+    margin: 100px 60px;
     font-size: 20px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -29,7 +30,7 @@ h1{
     font-size:30px;
 }
 .todo-container{
-    display: flexbox;
+    position: relative;
     width: 700px;
     margin: 30px auto 0;
     background-color: #e4bad4;
@@ -39,9 +40,10 @@ h1{
  .add-task{
 background-color: #aad8d3;
 padding: 15px;
-position: relative;
+position: absolute;
 border-radius:30px;
-margin: 20px;
+margin: 15px 20px;
+width: 95%;
 }
 
 .todo-container .add-task input{
@@ -107,12 +109,16 @@ transform: rotate(90deg);
 
 .task-box {
 display: block;
+flex-direction: column;
+position:absolute;
+display: block;
 font-size: 25px;
 color: #393e46;
 padding: 10px;
-margin-bottom: 10px;
+margin: 60px 0  10px -29px;
 border-radius:30px;
 background-color: rgba(224, 228, 230, 0.678);
+width: 90%;
 }
 
 
@@ -133,17 +139,19 @@ background-color: rgba(224, 228, 230, 0.678);
     font-size: 12px;
 }
 .task-stats .tasks-count{
+    position:absolute;
     width: 40%;
     float: left;
     padding: 10px;
     color: #72147e;
     font-size: 18px;
     font-weight: bold;
-    margin: 0 0 0 10px;
+    margin: 130px 0 0 -29px;
     cursor: pointer;
 }
 
 .task-stats .tasks-completed{
+    position:absolute;
     width: 50%;
     float: right;
     padding: 10px;
@@ -152,6 +160,7 @@ background-color: rgba(224, 228, 230, 0.678);
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    margin: 130px 0 0 288px;
 }
 
 .task-stats .tasks-count span,
