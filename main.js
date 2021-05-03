@@ -8,6 +8,7 @@ const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
 const taskContent = document.querySelector(".tasks-content");
 const taskCom = document.querySelector(".tasks-completed");
+const taskCon = document.querySelector(".tasks-count");
 
 // trying local storage 
 //myStorage = window.localStorage;
@@ -143,6 +144,10 @@ window.onload=()=>{
 
 taskCom.onclick=()=>{
    showList(myArray);
+}
+
+taskCon.onclick=()=>{
+   showList(arr);
 }
 //completedTask2 = ()=>{
    // myArray array of completed

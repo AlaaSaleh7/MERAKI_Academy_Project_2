@@ -36,12 +36,12 @@ h1{
     border-radius:30px;
     height:200px;
 }
-.todo-container .add-task{
+ .add-task{
 background-color: #aad8d3;
 padding: 15px;
 position: relative;
 border-radius:30px;
-margin: 15px 20px;
+margin: 20px;
 }
 
 .todo-container .add-task input{
@@ -92,9 +92,9 @@ transform: rotate(90deg);
     border-radius:30px;
 }
 
-.tasks-content > span:not(:last-child){
+/*.tasks-content > span:not(:last-child){
     margin-bottom: 10px;
-}
+}*/
 .delete{
     float: right;
     padding: 4px 4px;
