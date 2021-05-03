@@ -1,3 +1,4 @@
+// selector the tag in html
 const body=document.querySelector("body");
 const theInput = document.querySelector(".add-task input");
 const addButton= document.querySelector(".add-task .add");
@@ -6,80 +7,85 @@ const noTaskMsg = document.querySelector(".no-tasks-message");
 const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
 const taskContent = document.querySelector(".tasks-content");
-const completedButton = document.querySelector("#count");
-const allTasksButton = document.querySelector("#all-tasks");
 
-myStorage = window.localStorage;
-localStorage.setItem('theInput', 'theInput.value');
+// trying local storage 
+//myStorage = window.localStorage;
+//localStorage.setItem('theInput', 'theInput.value');
 
-window.onload=function(){
+// function focus input 
+window.onload=()=>{
      theInput.focus();
      numberTasks();
  };
 
+ // modify array to save the values
  let arr = [];
 
- addButton.onclick = function(){
+ // write a function when user click the add button 
+ addButton.onclick = ()=>{
+// if the user click the button add without write a task output massage 
  if(theInput.value===''){
  noTaskMsg.innerHTML = 'Please Add Your Task !';
 
-
-
+ // if not add the task to Array 
  }else{
      noTaskMsg.remove(); 
     arr.push(theInput.value);
+ // view the tasks
     showList(arr);
  }
  };
 
+//creat a function to output the tasks and with completed and delete click with each task.
  showList = (x)=>{
     noTaskMsg.remove(); 
     taskContent.innerHTML="";
     for(let i = 0; i < x.length;i++){
-        let mainSpan = document.createElement("span");
+       //creat div task-box and spans delete, completed 
+        let mainDiv = document.createElement("div");
 
         let deleteElement= document.createElement("span");
 
         let completedElement = document.createElement("span");
-    
+        // modify text = value of array.
         let text=document.createTextNode(x[i]);
-    
+        // the words delete and completed in task-box
         let textDelete=document.createTextNode("delete");
         
         let textComp=document.createTextNode("completed");
-
+        // give the text delete id = i to be unique and dynamic
         textDelete.id = i;
-
-        mainSpan.appendChild(text);
-        
-        mainSpan.className="task-box";
-
+        // append text =x[i] to div task-box
+        mainDiv.appendChild(text);
+        // modify mainDiv of the name task-box 
+        mainDiv.className="task-box";
+        // append the  text delete and completed to the spans
         deleteElement.appendChild(textDelete);
 
         completedElement.appendChild(textComp);
-
+        // modify spans id dynamic
         deleteElement.id=`delete${i}`;
 
         completedElement.id=`completed${i}`;
-
+        //add the delete and completed words to be list
         deleteElement.classList.add("delete"); 
 
         completedElement.classList.add("completed");
-
+        // event click on the delete and completed
         deleteElement.addEventListener('click',deleteTask);
 
         completedElement.addEventListener('click',completedTask);
+        //put the spans delete and completed in mainDiv
+        mainDiv.appendChild(deleteElement);
 
-        mainSpan.appendChild(deleteElement);
-
-        mainSpan.appendChild(completedElement);
-
-        taskContent.appendChild(mainSpan);
-
+        mainDiv.appendChild(completedElement);
+      //put the mainDive "task-box" in Div"taskContent"
+        taskContent.appendChild(mainDiv);
+      // empty the input
         theInput.value ='';
-    
+      //focus the input again to input anther task
         theInput.focus();
-    
+      // change the number of tasks when the user add anther one
         numberTasks();
      }
     
@@ -118,28 +124,37 @@ window.onload=function(){
 
     arr.splice(a,1);
 
-    numberTasks();
-   
 
  };
 
-function numberTasks(){
+ // give the numbers of the tasks by length of array.
+ const numberTasks=()=>{
         tasksCount.innerHTML= arr.length;
 };
 
 
 let myArray = [];
-completedButton.onclick = function(){
+
+completedTask2 = ()=>{
+   let text=document.createTextNode(x[i]);
    myArray.push();
+
    let arrayCompleted = document.createElement("div");
+
    arrayCompleted.className="completed";
+
    arrayCompleted.appendChild(taskContent);
-   showList();
+
+   completedElement.addEventListener('click',completedTask2);
+
+   showList(myArray);
 }
 
-allTasksButton.onclick = function(){
 
-}
+
+//allTasksButton.onclick = ()=>{
+
+//}
 
 
 // Trying with jQuary//
