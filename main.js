@@ -7,6 +7,7 @@ const noTaskMsg = document.querySelector(".no-tasks-message");
 const tasksCount = document.querySelector(".tasks-count span");
 const tasksCompleted = document.querySelector(".tasks-completed span");
 const taskContent = document.querySelector(".tasks-content");
+const taskCom = document.querySelector(".tasks-completed");
 
 // trying local storage 
 //myStorage = window.localStorage;
@@ -140,19 +141,28 @@ window.onload=()=>{
 };
 
 
-
-completedTask2 = ()=>{
-   // myArray array of completed
-
-let arrayCompleted= document.createElement("div");
-
-   arrayCompleted.className="completed";
-
-   arrayCompleted.appendChild(taskContent);
-
-   completedElement.addEventListener('click',completedTask2);
-
+taskCom.onclick=()=>{
+   showList(myArray);
 }
+//completedTask2 = ()=>{
+   // myArray array of completed
+   // the value of myArray in span
+   // append the spans to div completed
+   // show it in a div when click on completed
+   // hidden the all tasks
+  // myArray.forEach(function(element){
+     // spanElement=document.createElement("span");
+     // let arrayCompleted= document.createElement("div");
+     // arrayCompleted.appendChild(spanElement);
+      //(".tasks-completed").onclick(completedTask2)
+      //document.querySelector(arrayCompleted).show
+      //document.querySelector(tasksCount).hidden
+      
+  // })
+
+
+
+//}
 
 
 
