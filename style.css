@@ -110,15 +110,14 @@ transform: rotate(90deg);
 .task-box {
 display: block;
 flex-direction: column;
-position:absolute;
 display: block;
 font-size: 25px;
 color: #393e46;
-padding: 10px;
-margin: 60px 0  10px -29px;
+padding: 12px;
+margin: 159px 0px -154px -17px;
 border-radius:30px;
 background-color: rgba(224, 228, 230, 0.678);
-width: 90%;
+width: 105%;
 }
 
 
